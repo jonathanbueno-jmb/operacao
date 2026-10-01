@@ -4931,7 +4931,7 @@ window.rodoLogoCliente = function(nome){
 <div id="toast" class="toast success">⚠️ Não foi possível baixar os dados automaticamente. Use o botão Importar.</div>
 <div id="overlay" class="overlay">
   <div class="spinner"></div>
-  <div id="overlayText">Baixando dados atualizados...</div>
+  <div id="overlayText">Aguarde o processamento!</div>
 </div>
 
 <!-- DADOS EMBUTIDOS (gzip + base64) -->
@@ -13541,7 +13541,7 @@ async function autoCarregarDados() {
   const overlay = document.getElementById('overlay');
   const overlayText = document.getElementById('overlayText');
   if (overlay) overlay.classList.add('show');
-  if (overlayText) overlayText.textContent = 'Baixando dados atualizados...';
+  if (overlayText) overlayText.textContent = 'Aguarde o processamento!';
 
   try {
     console.log('[AutoLoad] Buscando:', URL_DADOS);
