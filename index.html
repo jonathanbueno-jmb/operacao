@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Dashboard Rodobras v49.46+logo - ENTREGAS: card Clientes com Mais Entregas mostra a logo do cliente abaixo do nome quando o filtro Cliente está ativo | v49.46 - GESTÃO: logo do cliente à ESQUERDA do card Nível de Serviço | v49.45 - GESTÃO: logo do cliente ao lado do card Nível de Serviço (Status Crítico) | v49.44 - GESTÃO: textos auxiliares removidos dos cards de Ocorrências | v49.43 - GESTÃO: Ocorrência 73 = quanto mais melhor; card Ocorrências do Status Crítico só 51/52/57/58; % Ocorrência 73 no lugar da Taxa de Romaneio; velocidade da faixa no Config | v49.42 - GESTÃO: sem painel Ranking; faixa sem contorno azul; números só operação NORMAL; Config edita clientes+mensagens+ícones; botões flutuantes menores/translúcidos | v49.41 - NOVA TELA GESTÃO (menu > Gestão): cards críticos, ranking, ocorrências e gráficos com DADOS REAIS; rotação de clientes; HISTÓRICO DE PERFORMANCE salvo no navegador (1 registro/dia/cliente, gráfico + tabela + CSV). v49.40 - TELÃO: fonte da faixa configurável (TELAO_FONTE): Segoe UI (padrão), Bebas Neue, Oswald, Montserrat, Roboto, Space Mono; também por mensagem (fonte: '...'). v49.39 - ÍCONES personalizados embutidos (classes .ico-NOME) e utilizáveis nas mensagens do telão com :NOME:. v49.38 - TELÃO: faixa sem bordas; tempo da rotação configurável em minutos OU segundos (TELAO_TROCA_TEMPO + TELAO_TROCA_UNIDADE). v49.37 - TELÃO: faixa de mensagem agora fica logo abaixo dos filtros da tela Entregas, com fundo transparente; mensagens editáveis no bloco 'CONFIGURAÇÃO DAS MENSAGENS' (final do arquivo). v49.36 - AUTOMAÇÃO TELÃO com MENSAGEM ANIMADA: faixa 'Visualizando: <cliente>' passando na tela a cada troca de cliente (5 min). v49.35 - AUTOMAÇÃO TELÃO: filtro Cliente da tela Entregas rotaciona a cada 5 min entre Electrolux, LG, Whirlpool, Midea e Whp-Peças (pararAutomaticao() no console interrompe). v49.34 - Tag ao lado do botão Atualizar mostra SOMENTE 'Atualizado em dd/mm/aaaa às hh:mm' (removido o total de registros; o destaque vermelho >24h continua, com o tempo decorrido no tooltip). v49.33 - CUSTOS: evento 5104 passa a ser considerado na importação da aba custos (soma no card Total de Custo por Evento, Custos por Unidade, Evolução Mensal e filtro Evento; é preciso reimportar/Atualizar uma vez). v49.32 - Botão Atualizar: agora faz F5 (recarrega a página) e SÓ ENTÃO baixa os dados; a dashboard não baixa mais os dados automaticamente ao abrir (usa os dados já salvos). v49.31 - Planejamento: botão Importar (XLSX) + coluna DATA no export. Entregas: cards Ocorrências/PROCEDIMENTOS trocados. v49.30 - ROOTFIX: colunas OCO entram no row como 0/1 (SIM->1, soma) + guardião unidade_lock no currentFilter. v49.29 - Fix sessão unidade_lock + cache legado + parser OCO forçado. v49.28 - Hotfix render (getElementById nulos + ufAgg objeto + catch OCO). v49.27 Fix: OCO 51/52/57/58 (flag SIM genérica) · UF card padrão Top10 · OCO card ignora filtro Operação · trava Unidade reforçada. Base v49.26:
+<!-- Dashboard Rodobras v49.47 - GESTÃO: botão Config agora permite ESCOLHER O MÊS (além de 'mês mais recente' e 'todos os dados'); USUÁRIOS: embutidos apenas os masters (jonathan, pacheco) + karine (acesso somente à tela Gestão) | v49.46+logo - ENTREGAS: card Clientes com Mais Entregas mostra a logo do cliente abaixo do nome quando o filtro Cliente está ativo | v49.46 - GESTÃO: logo do cliente à ESQUERDA do card Nível de Serviço | v49.45 - GESTÃO: logo do cliente ao lado do card Nível de Serviço (Status Crítico) | v49.44 - GESTÃO: textos auxiliares removidos dos cards de Ocorrências | v49.43 - GESTÃO: Ocorrência 73 = quanto mais melhor; card Ocorrências do Status Crítico só 51/52/57/58; % Ocorrência 73 no lugar da Taxa de Romaneio; velocidade da faixa no Config | v49.42 - GESTÃO: sem painel Ranking; faixa sem contorno azul; números só operação NORMAL; Config edita clientes+mensagens+ícones; botões flutuantes menores/translúcidos | v49.41 - NOVA TELA GESTÃO (menu > Gestão): cards críticos, ranking, ocorrências e gráficos com DADOS REAIS; rotação de clientes; HISTÓRICO DE PERFORMANCE salvo no navegador (1 registro/dia/cliente, gráfico + tabela + CSV). v49.40 - TELÃO: fonte da faixa configurável (TELAO_FONTE): Segoe UI (padrão), Bebas Neue, Oswald, Montserrat, Roboto, Space Mono; também por mensagem (fonte: '...'). v49.39 - ÍCONES personalizados embutidos (classes .ico-NOME) e utilizáveis nas mensagens do telão com :NOME:. v49.38 - TELÃO: faixa sem bordas; tempo da rotação configurável em minutos OU segundos (TELAO_TROCA_TEMPO + TELAO_TROCA_UNIDADE). v49.37 - TELÃO: faixa de mensagem agora fica logo abaixo dos filtros da tela Entregas, com fundo transparente; mensagens editáveis no bloco 'CONFIGURAÇÃO DAS MENSAGENS' (final do arquivo). v49.36 - AUTOMAÇÃO TELÃO com MENSAGEM ANIMADA: faixa 'Visualizando: <cliente>' passando na tela a cada troca de cliente (5 min). v49.35 - AUTOMAÇÃO TELÃO: filtro Cliente da tela Entregas rotaciona a cada 5 min entre Electrolux, LG, Whirlpool, Midea e Whp-Peças (pararAutomaticao() no console interrompe). v49.34 - Tag ao lado do botão Atualizar mostra SOMENTE 'Atualizado em dd/mm/aaaa às hh:mm' (removido o total de registros; o destaque vermelho >24h continua, com o tempo decorrido no tooltip). v49.33 - CUSTOS: evento 5104 passa a ser considerado na importação da aba custos (soma no card Total de Custo por Evento, Custos por Unidade, Evolução Mensal e filtro Evento; é preciso reimportar/Atualizar uma vez). v49.32 - Botão Atualizar: agora faz F5 (recarrega a página) e SÓ ENTÃO baixa os dados; a dashboard não baixa mais os dados automaticamente ao abrir (usa os dados já salvos). v49.31 - Planejamento: botão Importar (XLSX) + coluna DATA no export. Entregas: cards Ocorrências/PROCEDIMENTOS trocados. v49.30 - ROOTFIX: colunas OCO entram no row como 0/1 (SIM->1, soma) + guardião unidade_lock no currentFilter. v49.29 - Fix sessão unidade_lock + cache legado + parser OCO forçado. v49.28 - Hotfix render (getElementById nulos + ufAgg objeto + catch OCO). v49.27 Fix: OCO 51/52/57/58 (flag SIM genérica) · UF card padrão Top10 · OCO card ignora filtro Operação · trava Unidade reforçada. Base v49.26:
      1) Card 'UF com Mais Entregas' movido para após 'Ocorrências'.
      2) Novo card 'Ocorrências' após 'Total de Entregas' com códigos
         01/02/03/08/10/11/12/51/52/57/58 usando as colunas
@@ -15,7 +15,7 @@
         à tela Entregas e filtro Unidade CONGELADO na unidade dele.
         Padrão: login = sigla da unidade em minúsculas; ao editar,
         marque role 'unidade' e a sigla no campo 'unidade_lock'.
-        Usuário embutido: apu / senha 46402770000161 (unidade APU).
+        (v49.47: os usuários de unidade deixaram de ser embutidos no arquivo.)
 
      Histórico v49.24→v49.25 (RECLAME AQUI):
      1) Gráfico "Índice de Reclamações (% sobre Emissões)": passa a
@@ -4937,7 +4937,7 @@ window.rodoLogoCliente = function(nome){
             <th>Ações</th>
           </tr>
         </thead>
-        <tbody id="cfgUsersTbody"><tr><td><b>jonathan</b></td><td>Jonathan</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="jonathan" data-real="789asdf" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="jonathan" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill master">Master</span></td><td><div class="scr-chips"><span class="chip all">Todas as telas</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="jonathan" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button></td></tr><tr><td><b>pacheco</b></td><td>Pacheco</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="pacheco" data-real="12345" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="pacheco" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill master">Master</span></td><td><div class="scr-chips"><span class="chip all">Todas as telas</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="pacheco" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button></td></tr><tr><td><b>wagner</b></td><td>Wagner</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="wagner" data-real="wagner1" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="wagner" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">Entregas</span> <span class="chip">Parceiros</span> <span class="chip">Prazos</span> <span class="chip">Coletas</span> <span class="chip">Avaliação</span> <span class="chip">Reclame Aqui</span> <span class="chip">Custos</span> <span class="chip">Qualidade</span> <span class="chip">Planejamento</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="wagner" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="wagner" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>everton</b></td><td>Everton</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="everton" data-real="everton2" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="everton" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">Entregas</span> <span class="chip">Parceiros</span> <span class="chip">Prazos</span> <span class="chip">Coletas</span> <span class="chip">Avaliação</span> <span class="chip">Reclame Aqui</span> <span class="chip">Custos</span> <span class="chip">Qualidade</span> <span class="chip">Planejamento</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="everton" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="everton" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>maicon</b></td><td>Maicon</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="maicon" data-real="maicon3" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="maicon" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">Entregas</span> <span class="chip">Parceiros</span> <span class="chip">Prazos</span> <span class="chip">Coletas</span> <span class="chip">Avaliação</span> <span class="chip">Reclame Aqui</span> <span class="chip">Custos</span> <span class="chip">Qualidade</span> <span class="chip">Planejamento</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="maicon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="maicon" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>rodrigo</b></td><td>Rodrigo</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="rodrigo" data-real="rodrigo4" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="rodrigo" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">Entregas</span> <span class="chip">Parceiros</span> <span class="chip">Prazos</span> <span class="chip">Coletas</span> <span class="chip">Avaliação</span> <span class="chip">Reclame Aqui</span> <span class="chip">Custos</span> <span class="chip">Qualidade</span> <span class="chip">Planejamento</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="rodrigo" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="rodrigo" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>juarez</b></td><td>Juarez</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="juarez" data-real="juarez5" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="juarez" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">Entregas</span> <span class="chip">Parceiros</span> <span class="chip">Prazos</span> <span class="chip">Coletas</span> <span class="chip">Avaliação</span> <span class="chip">Reclame Aqui</span> <span class="chip">Custos</span> <span class="chip">Qualidade</span> <span class="chip">Planejamento</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="juarez" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="juarez" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>pedra</b></td><td>Rodrigo P</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="pedra" data-real="pedra6" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="pedra" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">Entregas</span> <span class="chip">Parceiros</span> <span class="chip">Prazos</span> <span class="chip">Coletas</span> <span class="chip">Avaliação</span> <span class="chip">Custos</span> <span class="chip">Planejamento</span> <span class="chip">Qualidade</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="pedra" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="pedra" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>aline</b></td><td>Aline</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="aline" data-real="aline7" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="aline" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">Entregas</span> <span class="chip">Parceiros</span> <span class="chip">Prazos</span> <span class="chip">Coletas</span> <span class="chip">Avaliação</span> <span class="chip">Custos</span> <span class="chip">Planejamento</span> <span class="chip">Qualidade</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="aline" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="aline" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>daniel</b></td><td>Daniel</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="daniel" data-real="daniel8" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="daniel" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">Entregas</span> <span class="chip">Parceiros</span> <span class="chip">Prazos</span> <span class="chip">Coletas</span> <span class="chip">Avaliação</span> <span class="chip">Custos</span> <span class="chip">Planejamento</span> <span class="chip">Qualidade</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="daniel" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="daniel" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>matheus</b></td><td>Matheus</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="matheus" data-real="matheus6" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="matheus" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">Entregas</span> <span class="chip">Parceiros</span> <span class="chip">Prazos</span> <span class="chip">Coletas</span> <span class="chip">Avaliação</span> <span class="chip">Reclame Aqui</span> <span class="chip">Custos</span> <span class="chip">Planejamento</span> <span class="chip">Qualidade</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="matheus" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="matheus" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>gian</b></td><td>Gian</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="gian" data-real="merolli" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="gian" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill master">Master</span></td><td><div class="scr-chips"><span class="chip all">Todas as telas</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="gian" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button></td></tr><tr><td><b>janiele</b></td><td>Janiele</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="janiele" data-real="janiele1" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="janiele" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">Entregas</span> <span class="chip">Parceiros</span> <span class="chip">Prazos</span> <span class="chip">comercial</span> <span class="chip">financeiro</span> <span class="chip">frota</span> <span class="chip">Coletas</span> <span class="chip">Custos</span> <span class="chip">Avaliação</span> <span class="chip">Reclame Aqui</span> <span class="chip">Qualidade</span> <span class="chip">tratamento</span> <span class="chip">Planejamento</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="janiele" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="janiele" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>carlos</b></td><td>Carlos</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="carlos" data-real="carlos6" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="carlos" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">Entregas</span> <span class="chip">Parceiros</span> <span class="chip">Prazos</span> <span class="chip">Coletas</span> <span class="chip">Avaliação</span> <span class="chip">Reclame Aqui</span> <span class="chip">Custos</span> <span class="chip">Qualidade</span> <span class="chip">Planejamento</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="carlos" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="carlos" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>gabriel</b></td><td>Gabriel</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="gabriel" data-real="gabriel7" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="gabriel" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">Entregas</span> <span class="chip">Parceiros</span> <span class="chip">Prazos</span> <span class="chip">Coletas</span> <span class="chip">Avaliação</span> <span class="chip">Reclame Aqui</span> <span class="chip">Custos</span> <span class="chip">Qualidade</span> <span class="chip">Planejamento</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="gabriel" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="gabriel" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>wilian</b></td><td>Wilian</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="wilian" data-real="wilian8" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="wilian" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">Entregas</span> <span class="chip">Parceiros</span> <span class="chip">Prazos</span> <span class="chip">Coletas</span> <span class="chip">Avaliação</span> <span class="chip">Reclame Aqui</span> <span class="chip">Custos</span> <span class="chip">Qualidade</span> <span class="chip">Planejamento</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="wilian" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="wilian" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>luana</b></td><td>Luana</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="luana" data-real="luana9" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="luana" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">Entregas</span> <span class="chip">Parceiros</span> <span class="chip">Prazos</span> <span class="chip">Coletas</span> <span class="chip">Avaliação</span> <span class="chip">Reclame Aqui</span> <span class="chip">Custos</span> <span class="chip">Qualidade</span> <span class="chip">Planejamento</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="luana" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="luana" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>geraldo</b></td><td>Geraldo</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="geraldo" data-real="geraldo1" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="geraldo" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">comercial</span> <span class="chip">Planejamento</span> <span class="chip">Qualidade</span> <span class="chip">Prazos</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="geraldo" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="geraldo" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>alexsandro</b></td><td>Alexsandro</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="alexsandro" data-real="alexsandro2" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="alexsandro" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">comercial</span> <span class="chip">Planejamento</span> <span class="chip">Qualidade</span> <span class="chip">Prazos</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="alexsandro" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="alexsandro" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>sergio</b></td><td>Sergio</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="sergio" data-real="merolli" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="sergio" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">comercial</span> <span class="chip">Planejamento</span> <span class="chip">Qualidade</span> <span class="chip">Prazos</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="sergio" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="sergio" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>scopim</b></td><td>Scopim</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="scopim" data-real="scopim3" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="scopim" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">comercial</span> <span class="chip">Planejamento</span> <span class="chip">Qualidade</span> <span class="chip">Prazos</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="scopim" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="scopim" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>caesar</b></td><td>Caesar</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="caesar" data-real="caesar4" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="caesar" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">comercial</span> <span class="chip">Planejamento</span> <span class="chip">Qualidade</span> <span class="chip">Prazos</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="caesar" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="caesar" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr><tr><td><b>wilson</b></td><td>Wilson</td><td><div style="display:inline-flex;align-items:center;gap:8px;"><code class="pwd-text" data-login="wilson" data-real="wilson5" data-shown="0" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px;letter-spacing:1px;min-width:70px;display:inline-block;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;">••••••</code><button type="button" class="act-btn pwd-toggle" data-login="wilson" title="Visualizar senha" aria-label="Visualizar senha"><svg class="icon-eye" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg class="icon-eye-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a19.77 19.77 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a19.77 19.77 0 0 1-3.17 4.19"></path><path d="M1 1l22 22"></path><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"></path></svg></button></div></td><td><span class="role-pill user">Usuário</span></td><td><div class="scr-chips"><span class="chip">comercial</span> <span class="chip">Planejamento</span> <span class="chip">Qualidade</span> <span class="chip">Prazos</span></div></td><td class="actions"><button class="act-btn edit" data-action="edit" data-login="wilson" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="act-btn delete" data-action="delete" data-login="wilson" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg></button></td></tr></tbody>
+        <tbody id="cfgUsersTbody"></tbody>
       </table>
     </div>
   </div>
@@ -11265,6 +11265,7 @@ const QUAL_DEFAULT = {"rnc":[{"id":1,"acao":"Enviado Pacote de RNC's mes de junh
     "role": "master",
     "screens": [
       "entregas",
+      "gestao",
       "parceiros",
       "prazos",
       "coletas",
@@ -11283,6 +11284,7 @@ const QUAL_DEFAULT = {"rnc":[{"id":1,"acao":"Enviado Pacote de RNC's mes de junh
     "role": "master",
     "screens": [
       "entregas",
+      "gestao",
       "parceiros",
       "prazos",
       "coletas",
@@ -11295,332 +11297,12 @@ const QUAL_DEFAULT = {"rnc":[{"id":1,"acao":"Enviado Pacote de RNC's mes de junh
     ]
   },
   {
-    "login": "wagner",
-    "nome": "Wagner",
-    "senha": "wagner1",
+    "login": "karine",
+    "nome": "Karine",
+    "senha": "karine0",
     "role": "user",
     "screens": [
-      "entregas",
-      "parceiros",
-      "prazos",
-      "coletas",
-      "avaliacao",
-      "reclame",
-      "custos",
-      "qualidade",
-      "planejamento"
-    ]
-  },
-  {
-    "login": "everton",
-    "nome": "Everton",
-    "senha": "everton2",
-    "role": "user",
-    "screens": [
-      "entregas",
-      "parceiros",
-      "prazos",
-      "coletas",
-      "avaliacao",
-      "reclame",
-      "custos",
-      "qualidade",
-      "planejamento"
-    ]
-  },
-  {
-    "login": "maicon",
-    "nome": "Maicon",
-    "senha": "maicon3",
-    "role": "user",
-    "screens": [
-      "entregas",
-      "parceiros",
-      "prazos",
-      "coletas",
-      "avaliacao",
-      "reclame",
-      "custos",
-      "qualidade",
-      "planejamento"
-    ]
-  },
-  {
-    "login": "rodrigo",
-    "nome": "Rodrigo",
-    "senha": "rodrigo4",
-    "role": "user",
-    "screens": [
-      "entregas",
-      "parceiros",
-      "prazos",
-      "coletas",
-      "avaliacao",
-      "reclame",
-      "custos",
-      "qualidade",
-      "planejamento"
-    ]
-  },
-  {
-    "login": "juarez",
-    "nome": "Juarez",
-    "senha": "juarez5",
-    "role": "user",
-    "screens": [
-      "entregas",
-      "parceiros",
-      "prazos",
-      "coletas",
-      "avaliacao",
-      "reclame",
-      "custos",
-      "qualidade",
-      "planejamento"
-    ]
-  },
-  {
-    "login": "pedra",
-    "nome": "Rodrigo P",
-    "senha": "pedra6",
-    "role": "user",
-    "screens": [
-      "entregas",
-      "parceiros",
-      "prazos",
-      "coletas",
-      "avaliacao",
-      "custos",
-      "planejamento",
-      "qualidade"
-    ]
-  },
-  {
-    "login": "aline",
-    "nome": "Aline",
-    "senha": "aline7",
-    "role": "user",
-    "screens": [
-      "entregas",
-      "parceiros",
-      "prazos",
-      "coletas",
-      "avaliacao",
-      "custos",
-      "planejamento",
-      "qualidade"
-    ]
-  },
-  {
-    "login": "daniel",
-    "nome": "Daniel",
-    "senha": "daniel8",
-    "role": "user",
-    "screens": [
-      "entregas",
-      "parceiros",
-      "prazos",
-      "coletas",
-      "avaliacao",
-      "custos",
-      "planejamento",
-      "qualidade"
-    ]
-  },
-  {
-    "login": "matheus",
-    "nome": "Matheus",
-    "senha": "matheus6",
-    "role": "user",
-    "screens": [
-      "entregas",
-      "parceiros",
-      "prazos",
-      "coletas",
-      "avaliacao",
-      "reclame",
-      "custos",
-      "planejamento",
-      "qualidade"
-    ]
-  },
-  {
-    "login": "gian",
-    "nome": "Gian",
-    "senha": "merolli",
-    "role": "master",
-    "screens": [
-      "entregas",
-      "parceiros",
-      "prazos",
-      "coletas",
-      "avaliacao",
-      "reclame",
-      "custos",
-      "qualidade",
-      "planejamento",
-      "configuracao"
-    ]
-  },
-  {
-    "login": "janiele",
-    "nome": "Janiele",
-    "senha": "janiele1",
-    "role": "user",
-    "screens": [
-      "entregas",
-      "parceiros",
-      "prazos",
-      "comercial",
-      "financeiro",
-      "frota",
-      "coletas",
-      "custos",
-      "avaliacao",
-      "reclame",
-      "qualidade",
-      "tratamento",
-      "planejamento"
-    ]
-  },
-  {
-    "login": "carlos",
-    "nome": "Carlos",
-    "senha": "carlos6",
-    "role": "user",
-    "screens": [
-      "entregas",
-      "parceiros",
-      "prazos",
-      "coletas",
-      "avaliacao",
-      "reclame",
-      "custos",
-      "qualidade",
-      "planejamento"
-    ]
-  },
-  {
-    "login": "gabriel",
-    "nome": "Gabriel",
-    "senha": "gabriel7",
-    "role": "user",
-    "screens": [
-      "entregas",
-      "parceiros",
-      "prazos",
-      "coletas",
-      "avaliacao",
-      "reclame",
-      "custos",
-      "qualidade",
-      "planejamento"
-    ]
-  },
-  {
-    "login": "wilian",
-    "nome": "Wilian",
-    "senha": "wilian8",
-    "role": "user",
-    "screens": [
-      "entregas",
-      "parceiros",
-      "prazos",
-      "coletas",
-      "avaliacao",
-      "reclame",
-      "custos",
-      "qualidade",
-      "planejamento"
-    ]
-  },
-  {
-    "login": "luana",
-    "nome": "Luana",
-    "senha": "luana9",
-    "role": "user",
-    "screens": [
-      "entregas",
-      "parceiros",
-      "prazos",
-      "coletas",
-      "avaliacao",
-      "reclame",
-      "custos",
-      "qualidade",
-      "planejamento"
-    ]
-  },
-  {
-    "login": "geraldo",
-    "nome": "Geraldo",
-    "senha": "geraldo1",
-    "role": "user",
-    "screens": [
-      "comercial",
-      "planejamento",
-      "qualidade",
-      "prazos"
-    ]
-  },
-  {
-    "login": "alexsandro",
-    "nome": "Alexsandro",
-    "senha": "alexsandro2",
-    "role": "user",
-    "screens": [
-      "comercial",
-      "planejamento",
-      "qualidade",
-      "prazos"
-    ]
-  },
-  {
-    "login": "sergio",
-    "nome": "Sergio",
-    "senha": "merolli",
-    "role": "user",
-    "screens": [
-      "comercial",
-      "planejamento",
-      "qualidade",
-      "prazos"
-    ]
-  },
-  {
-    "login": "scopim",
-    "nome": "Scopim",
-    "senha": "scopim3",
-    "role": "user",
-    "screens": [
-      "comercial",
-      "planejamento",
-      "qualidade",
-      "prazos"
-    ]
-  },
-  {
-    "login": "caesar",
-    "nome": "Caesar",
-    "senha": "caesar4",
-    "role": "user",
-    "screens": [
-      "comercial",
-      "planejamento",
-      "qualidade",
-      "prazos"
-    ]
-  },
-  {
-    "login": "wilson",
-    "nome": "Wilson",
-    "senha": "wilson5",
-    "role": "user",
-    "screens": [
-      "comercial",
-      "planejamento",
-      "qualidade",
-      "prazos"
+      "gestao"
     ]
   }
 ];
@@ -11704,98 +11386,22 @@ const QUAL_DEFAULT = {"rnc":[{"id":1,"acao":"Enviado Pacote de RNC's mes de junh
       users = users.map(u => u.login === 'pacheco' ? Object.assign({}, u, { role:'master', screens: ALL_SCREENS.slice() }) : u);
       changed = true;
     }
-    // v33: usuários embutidos (não-master) — acesso a tudo EXCETO 'configuracao' (Usuários)
-    const NON_MASTER_SCREENS = ALL_SCREENS.filter(s => s !== 'configuracao');
-    const EMBEDDED_USERS = [
-      { login:'wagner',  nome:'Wagner',  senha:'wagner1'  },
-      { login:'everton', nome:'Everton', senha:'everton2' },
-      { login:'maicon',  nome:'Maicon',  senha:'maicon3'  },
-      { login:'rodrigo', nome:'Rodrigo', senha:'rodrigo4' },
-      { login:'juarez',  nome:'Juarez',  senha:'juarez5'  }
+    // v49.47: usuária embutida (não-master) — acesso APENAS à tela 'gestao'
+    const GESTAO_ONLY_USERS = [
+      { login:'karine', nome:'Karine', senha:'karine0' }
     ];
-    EMBEDDED_USERS.forEach(eu => {
-      const existing = users.find(u => u.login === eu.login);
-      if(!existing){
-        users.push({ login: eu.login, nome: eu.nome, senha: eu.senha, role: 'user', screens: NON_MASTER_SCREENS.slice() });
-        changed = true;
-      } else {
-        // Garante senha, role e telas corretos (telas sem 'configuracao')
-        const fixedScreens = (existing.screens || []).filter(s => s !== 'configuracao');
-        const needsScreens = NON_MASTER_SCREENS.some(s => !fixedScreens.includes(s)) || fixedScreens.length !== NON_MASTER_SCREENS.length;
-        users = users.map(u => u.login === eu.login
-          ? Object.assign({}, u, { nome: eu.nome, senha: eu.senha, role: 'user', screens: NON_MASTER_SCREENS.slice() })
-          : u);
-        if(needsScreens || existing.senha !== eu.senha || existing.role !== 'user') changed = true;
-      }
+    GESTAO_ONLY_USERS.forEach(gu => {
+      const target = { login: gu.login, nome: gu.nome, senha: gu.senha, role: 'user', screens: ['gestao'] };
+      if(!users.some(u => u.login === gu.login)) users.push(target);
+      else users = users.map(u => u.login === gu.login ? Object.assign({}, u, target) : u);
+      changed = true;
     });
     // v49.26: usuários de UNIDADE — acesso APENAS à tela 'entregas' com
     // filtro Unidade CONGELADO na sigla da unidade. Para criar mais
     // usuários deste tipo depois, basta acrescentar { login:'<sigla-em-minusculo>',
     // nome:'<Sigla>', senha:'<cnpj-ou-senha>', unidade:'<SIGLA>' } neste array.
     const UNIT_USERS = [
-      { login:'apu', nome:'APU', senha:'46402770000161', unidade:'APU' },
-      { login:'asc', nome:'ASC', senha:'41557142000131', unidade:'ASC' },
-      { login:'bac', nome:'BAC', senha:'47149934000153', unidade:'BAC' },
-      { login:'bbs', nome:'BBS', senha:'51337956000114', unidade:'BBS' },
-      { login:'big', nome:'BIG', senha:'08723015000190', unidade:'BIG' },
-      { login:'bnu', nome:'BNU', senha:'47999944000188', unidade:'BNU' },
-      { login:'brq', nome:'BRQ', senha:'10725140000180', unidade:'BRQ' },
-      { login:'bto', nome:'BTO', senha:'45745671000110', unidade:'BTO' },
-      { login:'can', nome:'CAN', senha:'93094621000162', unidade:'CAN' },
-      { login:'cci', nome:'CCI', senha:'13909660000131', unidade:'CCI' },
-      { login:'cco', nome:'CCO', senha:'01870555000157', unidade:'CCO' },
-      { login:'cfc', nome:'CFC', senha:'34781710000118', unidade:'CFC' },
-      { login:'cha', nome:'CHA', senha:'50738925000102', unidade:'CHA' },
-      { login:'cho', nome:'CHO', senha:'08278341000135', unidade:'CHO' },
-      { login:'cia', nome:'CIA', senha:'18366163000158', unidade:'CIA' },
-      { login:'cmq', nome:'CMQ', senha:'00240635000166', unidade:'CMQ' },
-      { login:'cpm', nome:'CPM', senha:'00123386000129', unidade:'CPM' },
-      { login:'crm', nome:'CRM', senha:'64113802000190', unidade:'CRM' },
-      { login:'cvl', nome:'CVL', senha:'01213441000134', unidade:'CVL' },
-      { login:'cxs', nome:'CXS', senha:'20723074000163', unidade:'CXS' },
-      { login:'erm', nome:'ERM', senha:'02371743000101', unidade:'ERM' },
-      { login:'fbl', nome:'FBL', senha:'32740909000172', unidade:'FBL' },
-      { login:'foz', nome:'FOZ', senha:'09245423000146', unidade:'FOZ' },
-      { login:'frw', nome:'FRW', senha:'04586805000110', unidade:'FRW' },
-      { login:'gmo', nome:'GMO', senha:'13123664000190', unidade:'GMO' },
-      { login:'gva', nome:'GVA', senha:'11154130000103', unidade:'GVA' },
-      { login:'ibi', nome:'IBI', senha:'33855678000105', unidade:'IBI' },
-      { login:'ibm', nome:'IBM', senha:'58555465000199', unidade:'IBM' },
-      { login:'iji', nome:'IJI', senha:'08490045000101', unidade:'IJI' },
-      { login:'itj', nome:'ITJ', senha:'45758230000152', unidade:'ITJ' },
-      { login:'joa', nome:'JOA', senha:'06169713000160', unidade:'JOA' },
-      { login:'lag', nome:'LAG', senha:'05338674000114', unidade:'LAG' },
-      { login:'ldo', nome:'LDO', senha:'60644558000131', unidade:'LDO' },
-      { login:'lgv', nome:'LGV', senha:'29754337000257', unidade:'LGV' },
-      { login:'ljo', nome:'LJO', senha:'09661951000186', unidade:'LJO' },
-      { login:'lon', nome:'LON', senha:'04153872000140', unidade:'LON' },
-      { login:'mga', nome:'MGA', senha:'83083428000172', unidade:'MGA' },
-      { login:'mig', nome:'MIG', senha:'17630144000124', unidade:'MIG' },
-      { login:'mua', nome:'MUA', senha:'52852735000147', unidade:'MUA' },
-      { login:'oro', nome:'ORO', senha:'54899921000167', unidade:'ORO' },
-      { login:'pb2', nome:'PB2', senha:'34676351000139', unidade:'PB2' },
-      { login:'pel', nome:'PEL', senha:'97063267000160', unidade:'PEL' },
-      { login:'pfu', nome:'PFU', senha:'56221247000192', unidade:'PFU' },
-      { login:'pga', nome:'PGA', senha:'10708262000169', unidade:'PGA' },
-      { login:'prv', nome:'PRV', senha:'12480827000129', unidade:'PRV' },
-      { login:'ptg', nome:'PTG', senha:'01083033000105', unidade:'PTG' },
-      { login:'ptu', nome:'PTU', senha:'08019963000149', unidade:'PTU' },
-      { login:'rds', nome:'RDS', senha:'57030523000106', unidade:'RDS' },
-      { login:'rsi', nome:'RSI', senha:'09463239000172', unidade:'RSI' },
-      { login:'sar', nome:'SAR', senha:'05027069000122', unidade:'SAR' },
-      { login:'sbt', nome:'SBT', senha:'42386716000119', unidade:'SBT' },
-      { login:'sc1', nome:'SC1', senha:'37827191000170', unidade:'SC1' },
-      { login:'scx', nome:'SCX', senha:'26234563000138', unidade:'SCX' },
-      { login:'scz', nome:'SCZ', senha:'94380870000268', unidade:'SCZ' },
-      { login:'sec', nome:'SEC', senha:'10863778000188', unidade:'SEC' },
-      { login:'snt', nome:'SNT', senha:'31553582000167', unidade:'SNT' },
-      { login:'sro', nome:'SRO', senha:'34466944000170', unidade:'SRO' },
-      { login:'tba', nome:'TBA', senha:'34185783000147', unidade:'TBA' },
-      { login:'tij', nome:'TIJ', senha:'53646789000119', unidade:'TIJ' },
-      { login:'tlb', nome:'TLB', senha:'19710467000153', unidade:'TLB' },
-      { login:'vac', nome:'VAC', senha:'29754337000176', unidade:'VAC' },
-      { login:'vip', nome:'VIP', senha:'01819800000100', unidade:'VIP' },
-      { login:'ccv', nome:'CCV', senha:'54080849000222', unidade:'CCV' }
+      // v49.47: nenhum usuário de unidade embutido no arquivo.
     ];
     UNIT_USERS.forEach(uu => {
       const existing = users.find(u => u.login === uu.login);
@@ -14331,7 +13937,7 @@ const GESTAO_CONFIG = {
   // Recalcular os números a cada N segundos
   TEMPO_ATUALIZACAO_SEG: 120,
 
-  // Período usado nos números: 'mes-atual' (mês mais recente dos dados) ou 'tudo'
+  // Período usado nos números: 'mes-atual' (mês mais recente dos dados), 'tudo' ou um mês específico no formato 'AAAA-MM' (ex.: '2026-08'; também escolhível no botão Config)
   PERIODO: 'mes-atual',
 
   // Mensagens da faixa por cliente (use {cliente} e ícones :nome:)
@@ -14419,17 +14025,42 @@ const GESTAO_CONFIG = {
       if(!isFinite(y)||mi<0) return; const k=y*12+mi; if(best===null||k>best) best=k; });
     return best===null ? null : { ano: Math.floor(best/12), mes: MESES[best%12] };
   }
-  function linhasBase(){
+  function baseSemPeriodo(){
     let D = dados();
     if (window.__unitLock) D = D.filter(r => String(r.n||'').toUpperCase() === window.__unitLock);
     // v49.42: a Gestão mede as entregas SOMENTE pela operação do tipo NORMAL
     D = D.filter(r => String(r.f||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().trim() === 'NORMAL');
-    let ref = null;
-    if (GESTAO_CONFIG.PERIODO === 'mes-atual') {
-      ref = periodoRef(D);
+    return D;
+  }
+  // v49.47: meses presentes nos dados (mais recente primeiro) para o seletor do Config
+  const MESES_NOME = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+  function mesesDisponiveis(){
+    const set = new Set();
+    baseSemPeriodo().forEach(r => {
+      const y = parseInt(String(r.et||'').slice(0,4),10); const mi = MESES.indexOf(String(r.fd||'').toLowerCase());
+      if (isFinite(y) && mi >= 0) set.add(y*12+mi);
+    });
+    return [...set].sort((a,b)=>b-a).map(k => {
+      const ano = Math.floor(k/12), mi = k%12;
+      return { key: ano+'-'+String(mi+1).padStart(2,'0'), label: MESES_NOME[mi]+'/'+ano };
+    });
+  }
+  // PERIODO aceita: 'mes-atual' | 'tudo' | 'AAAA-MM' (mês escolhido)
+  function linhasBase(){
+    let D = baseSemPeriodo();
+    let ref = null, maisRecente = true;
+    const P = String(GESTAO_CONFIG.PERIODO || 'mes-atual');
+    const mm = /^(\d{4})-(\d{2})$/.exec(P);
+    if (P === 'mes-atual' || mm) {
+      const ultimo = periodoRef(D);
+      ref = ultimo;
+      if (mm && +mm[2] >= 1 && +mm[2] <= 12) {
+        ref = { ano: +mm[1], mes: MESES[+mm[2]-1] };
+        maisRecente = !!ultimo && String(ultimo.ano) === String(ref.ano) && ultimo.mes === ref.mes;
+      }
       if (ref) D = D.filter(r => String(r.fd||'').toLowerCase()===ref.mes && String(r.et||'').slice(0,4)===String(ref.ano));
     }
-    return { rows: D, ref };
+    return { rows: D, ref, maisRecente };
   }
 
   // Mesmas regras dos cards da tela Entregas
@@ -14502,9 +14133,11 @@ const GESTAO_CONFIG = {
 
   function atualizarGestao(){
     const D = dados(); if (!D.length) return;
-    const { rows, ref } = linhasBase();
+    const { rows, ref, maisRecente } = linhasBase();
     const porCliente = metricasPorCliente(rows);
-    salvarHistorico(porCliente, ref);              // histórico é salvo sempre, mesmo fora da tela
+    // histórico é salvo sempre, mesmo fora da tela — exceto ao consultar um mês antigo
+    // (senão o registro de hoje seria sobrescrito com números de outro mês)
+    if (maisRecente) salvarHistorico(porCliente, ref);
     const nomeLista = clienteDaVez();
     const nomeBase = resolverCliente(nomeLista);
     const m = nomeBase ? (porCliente[nomeBase] || calcularMetricas([])) : calcularMetricas([]);
@@ -14791,6 +14424,7 @@ const GESTAO_CONFIG = {
   function abrirConfiguracoes(){
     const C = GESTAO_CONFIG;
     const icones = Array.isArray(window._iconesDisponiveis) ? window._iconesDisponiveis : [];
+    const mesesOpts = mesesDisponiveis().map(m => `<option value="${m.key}">${esc(m.label)}</option>`).join('');
     const msgDe = cli => { let m = C.MENSAGENS[cli]; if (m == null) { const k = Object.keys(C.MENSAGENS).find(x => norm(x)===norm(cli)); m = k ? C.MENSAGENS[k] : ''; } return m; };
     abrirModal('⚙️ Configurações da Gestão', `
       <div class="gestao-modal-section"><h3>Clientes e mensagens da faixa</h3>
@@ -14808,7 +14442,7 @@ const GESTAO_CONFIG = {
         <input id="gcfg-vel" type="range" min="3" max="40" step="1" value="${esc(C.VELOCIDADE_SEG||10)}" style="width:100%">
         <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--gestao-neutral)"><span>⚡ mais rápida</span><span>🐢 mais lenta</span></div>
         <label class="gestao-cfg-lbl">Período dos números</label>
-        <select id="gcfg-periodo" class="gestao-cfg-in"><option value="mes-atual">Mês mais recente dos dados</option><option value="tudo">Todos os dados carregados</option></select></div>
+        <select id="gcfg-periodo" class="gestao-cfg-in"><option value="mes-atual">Mês mais recente dos dados</option>${mesesOpts ? '<optgroup label="Escolher o mês">'+mesesOpts+'</optgroup>' : ''}<option value="tudo">Todos os dados carregados</option></select></div>
       <div class="gestao-modal-section"><h3>Metas (%)</h3><div class="gestao-modal-row">
         <div><label class="gestao-cfg-lbl">Nível de Serviço</label><input id="gcfg-mns" class="gestao-cfg-in" type="number" step="0.1" value="${C.METAS.ns}"></div>
         <div><label class="gestao-cfg-lbl">Romaneio</label><input id="gcfg-mrom" class="gestao-cfg-in" type="number" step="0.1" value="${C.METAS.romaneio}"></div></div>
@@ -14816,7 +14450,7 @@ const GESTAO_CONFIG = {
         <div><label class="gestao-cfg-lbl">Ocorrência 73 (mínimo)</label><input id="gcfg-m73" class="gestao-cfg-in" type="number" step="0.1" value="${C.METAS.oc73!=null?C.METAS.oc73:35}"></div></div></div>
       <div class="gestao-hist-actions"><button class="gestao-floating-btn" id="gcfg-salvar">💾 Salvar</button>
         <button class="gestao-floating-btn danger" id="gcfg-reset">↺ Voltar ao padrão do arquivo</button></div>
-      <p class="gestao-hist-nota">Os ajustes ficam salvos neste navegador e valem por cima do bloco GESTAO_CONFIG do arquivo. Somente operação NORMAL entra nos números.</p>`);
+      <p class="gestao-hist-nota">Os ajustes ficam salvos neste navegador e valem por cima do bloco GESTAO_CONFIG do arquivo. Somente operação NORMAL entra nos números. Ao consultar um mês que não é o mais recente, o histórico diário não é gravado.</p>`);
     const lista = document.getElementById('gcfg-lista');
     let ultimoMsg = null;
     const preview = linha => { const cli = linha.querySelector('.gcfg-cli').value.trim(); const msg = linha.querySelector('.gcfg-msg').value;
@@ -14843,7 +14477,11 @@ const GESTAO_CONFIG = {
       alvo.dispatchEvent(new Event('input'));
     });
     document.getElementById('gcfg-unid').value = String(C.TEMPO_ROTACAO_UNIDADE).toLowerCase().startsWith('s') ? 'segundos' : 'minutos';
-    document.getElementById('gcfg-periodo').value = C.PERIODO === 'tudo' ? 'tudo' : 'mes-atual';
+    { const selP = document.getElementById('gcfg-periodo'); const cur = String(C.PERIODO || 'mes-atual');
+      if (/^\d{4}-\d{2}$/.test(cur) && !Array.from(selP.options).some(o => o.value === cur)) {   // mês salvo que não está mais nos dados
+        const op = document.createElement('option'); op.value = cur; op.textContent = cur.slice(5)+'/'+cur.slice(0,4); selP.appendChild(op);
+      }
+      selP.value = (cur === 'tudo' || /^\d{4}-\d{2}$/.test(cur)) ? cur : 'mes-atual'; }
     const velIn = document.getElementById('gcfg-vel'), velTxt = document.getElementById('gcfg-vel-txt');
     const velUpd = () => { velTxt.textContent = velIn.value + ' s para atravessar a tela';
       const b = document.getElementById('gestao-banner-text'); if (b) b.style.animationDuration = velIn.value + 's'; };
